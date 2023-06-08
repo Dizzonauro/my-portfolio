@@ -1,13 +1,7 @@
 import React from "react";
-import { HomeContainer } from "./styles";
-import Header from "../../components/Header";
 
-const Home: React.FC = () => {
-  return (
-    <HomeContainer>
-      <Header />
-    </HomeContainer>
-  );
+const Home = () => {
+  return <h1>DIABO</h1>;
 };
 
 export default Home;

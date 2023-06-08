@@ -1,8 +1,6 @@
-import React from "react";
-import { Global, Theme, css, useTheme } from "@emotion/react";
-import "./fontFamily.css";
+import { createGlobalStyle } from "styled-components";
 
-export const globalStyles = (theme: Theme) => css`
+const GlobalStyles = createGlobalStyle`
   *,
   *::before,
   *::after {
@@ -99,22 +97,13 @@ export const globalStyles = (theme: Theme) => css`
   }
 
   body {
-    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     transition: all 0.25s linear;
-    background-color: ${theme.colors.backgroundColor};
-    font-family: "Exo", sans-serif;
+
   }
 `;
-
-const GlobalStyles: React.FC = () => {
-  const theme = useTheme();
-
-  return <Global styles={globalStyles(theme)} />;
-};
 
 export default GlobalStyles;

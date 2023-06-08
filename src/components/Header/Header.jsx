@@ -1,11 +1,15 @@
 import React from "react";
-import { HeaderContainer, HeaderBar, HeaderImg } from "./styles";
+import { HeaderContainer, HeaderBar, HeaderImg, ImageContent } from "./styles";
+import { useTheme } from "../../contexts/themeContext";
 
 export default function Header() {
+  const { toggleTheme } = useTheme();
+
   return (
     <HeaderContainer>
       <HeaderBar>
-        <HeaderImg>teste</HeaderImg>
+        <button onClick={toggleTheme}>diabo</button>
+        <HeaderImg></HeaderImg>
       </HeaderBar>
     </HeaderContainer>
   );

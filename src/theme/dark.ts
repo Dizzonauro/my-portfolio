@@ -1,14 +1,21 @@
 const primary = {
-  primary100: "#C6C6C6",
-  primary300: "#9491A4",
-  primary500: "#EEECCD",
+  primary100: "#c7ede8",
+  primary300: "#a0ded6",
+  primary500: "#7ececa",
+};
+
+const secondary = {
+  primary100: "#a9f04d",
+  primary300: "#3ddb8f",
+  primary500: "#2cb8b2",
 };
 
 const darkTheme = {
-  name: "dark",
+  mode: "dark",
   colors: {
+    background: "#1b1c26",
     ...primary,
-    backgroundColor: "#040d21",
+    ...secondary,
   },
 };
 
