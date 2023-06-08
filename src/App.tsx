@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./theme";
+import { ThemeContext } from "./contexts/themeContext";
 
 function App() {
+  const [currentTheme, setCurrentTheme] = useState<any>(theme.light);
+
+  const toggleTheme = () => {
+    setCurrentTheme(currentTheme.name === "dark" ? theme.light : theme.dark);
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={currentTheme}>
+      <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
+        <RouterProvider router={router} />;
+      </ThemeContext.Provider>
+    </ThemeProvider>
   );
 }
 
