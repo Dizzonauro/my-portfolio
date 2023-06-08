@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
 import { ThemeContext } from "./contexts/themeContext";
+import GlobalStyles from "./styles/globalStyles";
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState<any>(theme.light);
@@ -17,12 +18,26 @@ function App() {
       path: "/",
       element: <Home />,
     },
+    {
+      path: "/portfolio",
+    },
   ]);
+
+  const NavBar = () => {
+    return (
+      <div>
+        <li>
+          <Link to={"/portfolio"}>Portfolio</Link>
+        </li>
+      </div>
+    );
+  };
 
   return (
     <ThemeProvider theme={currentTheme}>
       <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
-        <RouterProvider router={router} />;
+        <GlobalStyles />
+        <RouterProvider router={router} />
       </ThemeContext.Provider>
     </ThemeProvider>
   );

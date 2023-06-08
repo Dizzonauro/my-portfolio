@@ -1,13 +1,12 @@
 import React from "react";
-import { HomeContainer, StyledH1 } from "./styles";
+import { HomeContainer } from "./styles";
+import Header from "../../components/Header";
 
 const Home: React.FC = () => {
   return (
-    <>
-      <HomeContainer>
-        <StyledH1>DEMONHOOOOOOOOOOOOOOOOOOOOOOOOOOO</StyledH1>
-      </HomeContainer>
-    </>
+    <HomeContainer>
+      <Header />
+    </HomeContainer>
   );
 };
 

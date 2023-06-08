@@ -1,14 +1,14 @@
 const primary = {
-  primary100: "#8E79AD",
-  primary300: "#4A2D74",
-  primary500: "#1A053A",
+  primary100: "#ffffff",
+  primary300: "#f6f8fa",
+  primary500: "#d1d5da",
 };
 
 const lightTheme = {
   name: "light",
   colors: {
     ...primary,
-    backgroundColor: "#000",
+    backgroundColor: "#d1d5da",
   },
 };
 
