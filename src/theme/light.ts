@@ -1,19 +1,20 @@
 const primary = {
-  primary100: "#ccc",
-  primary300: "#999",
-  primary500: "#555",
+  primary100: "#56565a",
+  primary300: "#2c2c31",
+  primary500: "#28282d",
 };
 
 const secondary = {
-  primary100: "#a9f04d",
-  primary300: "#3ddb8f",
-  primary500: "#2cb8b2",
+  secondary100: "#45ADA8",
+  secondary200: "#1D7B6B",
+  secondary300: "#FFD166",
 };
 
 const lightTheme = {
   mode: "light",
   colors: {
-    background: "#F00",
+    background: "#d8cbf7",
+    hover: "#0ccaba",
     ...primary,
     ...secondary,
   },

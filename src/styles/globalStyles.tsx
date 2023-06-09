@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import "./fontFamily.css";
+
 const GlobalStyles = createGlobalStyle`
   *,
   *::before,
@@ -97,12 +99,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     transition: all 0.25s linear;
-
+    background-color: ${({ theme }) => theme.colors.primary500};
+    font-family: 'Exo', sans-serif;
   }
 `;
 
