@@ -1,14 +1,7 @@
 import { styled } from "styled-components";
 import { DefaultTheme } from "styled-components/dist/types";
 
-const setBackground = (theme: DefaultTheme) => {
-  const backgroundStyle = `radial-gradient(circle, ${theme.colors.secondary100} 40%, ${theme.colors.background} 100%, ${theme.colors.background})`;
-
-  return backgroundStyle;
-};
-
 export const Container = styled.div`
-  background: ${({ theme }) => setBackground(theme)};
   padding-top: 70px;
   display: flex;
   justify-content: space-between;
