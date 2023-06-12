@@ -1,7 +1,7 @@
 const primary = {
   primary100: "#56565a",
-  primary300: "#2c2c31",
-  primary500: "#28282d",
+  primary200: "#2c2c31",
+  primary300: "#28282d",
 };
 
 const secondary = {

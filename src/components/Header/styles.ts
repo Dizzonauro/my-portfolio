@@ -1,5 +1,8 @@
 import { styled } from "styled-components";
 import { breakpoints } from "../../utils/constants/breakpoints";
+import { LuSunMoon } from "react-icons/lu";
+import { FaMoon } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
@@ -84,12 +87,14 @@ export const HeaderPages = styled.div`
   }
 `;
 
-export const Pages = styled.div`
+export const StyledLink = styled(Link)`
   font-weight: bold;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.primary100};
+  transition: transform 0.3s ease-in-out;
   &:hover {
     cursor: pointer;
-    transition: ease-in-out;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.primary100};
+    transform: scale(1.1);
   }
 `;
 
@@ -109,4 +114,16 @@ export const Container = styled.div`
   top: 0px;
   left: 0px;
   width: 300px;
+`;
+
+export const StyledLuSunMoon = styled(LuSunMoon)`
+  margin-top: 4px;
+  color: ${({ theme }) => theme.colors.primary100};
+  border: 1px solid red;
+`;
+
+export const StyledFaMoon = styled(FaMoon)`
+  margin-top: 4px;
+  color: ${({ theme }) => theme.colors.primary100};
+  border: 1px solid red;
 `;

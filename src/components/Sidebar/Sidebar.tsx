@@ -2,7 +2,10 @@ import React from "react";
 import {
   FaIconsContainer,
   SideBar,
+  StyledBsBriefcaseFill,
+  StyledFaBars,
   StyledFaHome,
+  StyledFaLaptopCode,
   StyledFaMoon,
   StyledLi,
   StyledLink,
@@ -10,30 +13,29 @@ import {
   StyledUl,
 } from "./styles";
 
-import { FaBars } from "react-icons/fa";
-
 export default function Sidebar({ onClick, currentTheme, toggleTheme }: any) {
   return (
     <SideBar>
       <FaIconsContainer>
-        <FaBars onClick={onClick} />
+        <StyledFaBars onClick={onClick} />
 
         {currentTheme.mode === "dark" ? (
-          <StyledFaMoon onClick={toggleTheme} />
-        ) : (
           <StyledLuSunMoon onClick={toggleTheme} />
+        ) : (
+          <StyledFaMoon onClick={toggleTheme} />
         )}
       </FaIconsContainer>
-
       <StyledUl>
         <StyledLi>
           <StyledFaHome />
           <StyledLink to="/">Home</StyledLink>
         </StyledLi>
         <StyledLi>
+          <StyledBsBriefcaseFill />
           <StyledLink to="/portfolio">Portfolio</StyledLink>
         </StyledLi>
         <StyledLi>
+          <StyledFaLaptopCode />
           <StyledLink to="/studies">Studies</StyledLink>
         </StyledLi>
       </StyledUl>

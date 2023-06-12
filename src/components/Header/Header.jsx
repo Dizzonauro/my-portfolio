@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   HeaderContainer,
   HeaderBar,
@@ -8,6 +8,9 @@ import {
   Pages,
   IconDarkMode,
   BarsContent,
+  StyledLuSunMoon,
+  StyledFaMoon,
+  StyledLink,
 } from "./styles";
 import { useTheme } from "../../contexts/themeContext";
 import cssLogo from "../../assets/imgs/cssLogo.png";
@@ -16,9 +19,7 @@ import javaScriptLogo from "../../assets/imgs/javaScriptLogo.png";
 import reactLogo from "../../assets/imgs/reactLogo.png";
 import typeScriptLogo from "../../assets/imgs/typeScriptLogo.png";
 
-import { FaMoon, FaBars } from "react-icons/fa";
-import { LuSunMoon } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 import Sidebar from "../Sidebar/index";
 
 export default function Header() {
@@ -27,9 +28,9 @@ export default function Header() {
 
   const renderIconTheme = () => {
     if (currentTheme.mode === "dark") {
-      return <LuSunMoon onClick={toggleTheme} />;
+      return <StyledLuSunMoon onClick={toggleTheme} />;
     } else {
-      return <FaMoon onClick={toggleTheme} />;
+      return <StyledFaMoon onClick={toggleTheme} />;
     }
   };
 
@@ -49,42 +50,9 @@ export default function Header() {
           <FaBars style={{ color: currentTheme.colors.secondary300 }} onClick={showSideBar} />
         </BarsContent>
         <HeaderPages>
-          <Pages>
-            <Link
-              style={{
-                color: currentTheme.colors.primary100,
-                fontWeight: "bold",
-                textDecoration: "none",
-              }}
-              to="/"
-            >
-              Home
-            </Link>
-          </Pages>
-          <Pages>
-            <Link
-              style={{
-                color: currentTheme.colors.primary100,
-                fontWeight: "bold",
-                textDecoration: "none",
-              }}
-              to="/portfolio"
-            >
-              Portfolio
-            </Link>
-          </Pages>
-          <Pages>
-            <Link
-              style={{
-                color: currentTheme.colors.primary100,
-                fontWeight: "bold",
-                textDecoration: "none",
-              }}
-              to="/studies"
-            >
-              Personal Studies
-            </Link>
-          </Pages>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/portfolio">Portfolio</StyledLink>
+          <StyledLink to="/studies">Personal Studies</StyledLink>
           <IconDarkMode>{renderIconTheme()}</IconDarkMode>
         </HeaderPages>
         {sideBar && (

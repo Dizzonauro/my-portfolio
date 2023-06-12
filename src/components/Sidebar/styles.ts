@@ -1,27 +1,18 @@
 import { styled } from "styled-components";
 import { breakpoints } from "../../utils/constants/breakpoints";
-import { FaHome, FaMoon } from "react-icons/fa";
+import { FaBars, FaHome, FaMoon, FaArrowRight, FaLaptopCode } from "react-icons/fa";
 import { LuSunMoon } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import { BsBriefcaseFill } from "react-icons/bs";
 
 export const SideBar = styled.div`
-  background-color: #171923;
+  background-color: ${({ theme }) => theme.colors.primary300};
   position: fixed;
   height: 100%;
   top: 0px;
   right: 0px;
   width: 300px;
   animation: showSidebar 0.4s;
-
-  > svg {
-    position: fixed;
-    color: white;
-    width: 30px;
-    height: 30px;
-    margin-top: 32px;
-    margin-right: 32px;
-    cursor: pointer;
-  }
 
   @keyframes showSidebar {
     from {
@@ -51,8 +42,18 @@ export const SideBar = styled.div`
 
 export const StyledUl = styled.ul`
   margin-top: 40px;
-  margin-left: 12px;
+  margin-left: 17px;
   color: ${({ theme }) => theme.colors.primary300};
+  animation: falling 0.5s ease-in-out;
+
+  @keyframes falling {
+    0% {
+      transform: translateY(-40%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 `;
 export const StyledLi = styled.li`
   color: ${({ theme }) => theme.colors.secondary100};
@@ -79,12 +80,37 @@ export const FaIconsContainer = styled.div`
   margin-top: 12px;
 `;
 
-export const StyledFaMoon = styled(FaMoon)`
+export const StyledFaArrowRight = styled(FaArrowRight)``;
+
+export const StyledFaBars = styled(FaBars)`
   color: ${({ theme }) => theme.colors.secondary300};
+  cursor: pointer;
+`;
+
+export const StyledFaMoon = styled(FaMoon)`
+  color: #5f9982;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const StyledLuSunMoon = styled(LuSunMoon)`
-  color: ${({ theme }) => theme.colors.secondary300};
+  color: #f4e196;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const StyledBsBriefcaseFill = styled(BsBriefcaseFill)`
+  color: ${({ theme }) => theme.colors.secondary100};
+  padding-top: 7px;
+  margin-right: 10px;
+`;
+
+export const StyledFaLaptopCode = styled(FaLaptopCode)`
+  color: ${({ theme }) => theme.colors.secondary100};
+  padding-top: 7px;
+  margin-right: 10px;
 `;
 
 export const StyledLink = styled(Link)`
