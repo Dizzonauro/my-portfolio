@@ -13,7 +13,8 @@ const secondary = {
 const darkTheme = {
   mode: "dark",
   colors: {
-    background: "#372560",
+    background: "#294273",
+    secondaryBackground: "#3b6db3",
     hover: "#c0d860",
     ...primary,
     ...secondary,

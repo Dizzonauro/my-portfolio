@@ -3,9 +3,16 @@ import { breakpoints } from "../../utils/constants/breakpoints";
 import { LuSunMoon } from "react-icons/lu";
 import { FaMoon } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { DefaultTheme } from "styled-components/dist/types";
+
+const setBackground = (theme: DefaultTheme) => {
+  const backgroundStyle = `linear-gradient(133deg, ${theme.colors.secondaryBackground} 37%, ${theme.colors.background} 100%)`;
+
+  return backgroundStyle;
+};
 
 export const HeaderContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => setBackground(theme)};
   color: ${({ theme }) => theme.colors.primary100};
   font-size: 1.3em;
   position: absolute;
@@ -118,12 +125,10 @@ export const Container = styled.div`
 
 export const StyledLuSunMoon = styled(LuSunMoon)`
   margin-top: 4px;
-  color: ${({ theme }) => theme.colors.primary100};
-  border: 1px solid red;
+  color: #ebf0f8;
 `;
 
 export const StyledFaMoon = styled(FaMoon)`
   margin-top: 4px;
-  color: ${({ theme }) => theme.colors.primary100};
-  border: 1px solid red;
+  color: #ebf0f8;
 `;

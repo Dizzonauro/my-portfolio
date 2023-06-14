@@ -1,6 +1,7 @@
 import React from "react";
 import {
   FaIconsContainer,
+  HeaderSidebar,
   SideBar,
   StyledBsBriefcaseFill,
   StyledFaBars,
@@ -13,18 +14,19 @@ import {
   StyledUl,
 } from "./styles";
 
-export default function Sidebar({ onClick, currentTheme, toggleTheme }: any) {
+export default function Sidebar({ currentTheme, toggleTheme }: any) {
   return (
     <SideBar>
-      <FaIconsContainer>
-        <StyledFaBars onClick={onClick} />
+      <HeaderSidebar>
+        <FaIconsContainer>
+          {currentTheme.mode === "dark" ? (
+            <StyledLuSunMoon onClick={toggleTheme} />
+          ) : (
+            <StyledFaMoon onClick={toggleTheme} />
+          )}
+        </FaIconsContainer>
+      </HeaderSidebar>
 
-        {currentTheme.mode === "dark" ? (
-          <StyledLuSunMoon onClick={toggleTheme} />
-        ) : (
-          <StyledFaMoon onClick={toggleTheme} />
-        )}
-      </FaIconsContainer>
       <StyledUl>
         <StyledLi>
           <StyledFaHome />

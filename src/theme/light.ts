@@ -1,5 +1,5 @@
 const primary = {
-  primary100: "#56565a",
+  primary100: "#fff",
   primary200: "#2c2c31",
   primary300: "#28282d",
 };
@@ -13,7 +13,8 @@ const secondary = {
 const lightTheme = {
   mode: "light",
   colors: {
-    background: "#d8cbf7",
+    background: "#50a1d9",
+    secondaryBackground: "#3c6eb4",
     hover: "#0ccaba",
     ...primary,
     ...secondary,

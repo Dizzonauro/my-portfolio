@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { DefaultTheme } from "styled-components/dist/types";
 
 const setBackground = (theme: DefaultTheme) => {
-  const backgroundStyle = `linear-gradient(to bottom, ${theme.colors.secondary100} 10%, ${theme.colors.background} 60%)`;
+  const backgroundStyle = `linear-gradient(121deg, ${theme.colors.background} 37%, ${theme.colors.secondary100} 100%)`;
 
   return backgroundStyle;
 };

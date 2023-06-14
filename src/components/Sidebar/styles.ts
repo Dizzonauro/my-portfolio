@@ -5,46 +5,25 @@ import { LuSunMoon } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { BsBriefcaseFill } from "react-icons/bs";
 
-export const SideBar = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary300};
-  position: fixed;
-  height: 100%;
-  top: 0px;
-  right: 0px;
-  width: 300px;
-  animation: showSidebar 0.4s;
+import { DefaultTheme } from "styled-components/dist/types";
 
-  @keyframes showSidebar {
-    from {
-      opacity: 0;
-      width: 0;
-    }
-    to {
-      opacity: 1;
-      width: 300px;
-    }
-  }
+const setBackground = (theme: DefaultTheme) => {
+  const backgroundStyle = `linear-gradient(133deg, ${theme.colors.secondaryBackground} 37%, ${theme.colors.background} 100%)`;
+
+  return backgroundStyle;
+};
+
+export const SideBar = styled.div`
+  background-color: ${({ theme }) => theme.colors.background};
+  position: fixed;
+  margin-top: 61px;
+  color: ${({ theme }) => theme.colors.primary300};
+  animation: falling 0.2s ease-in;
 
   @media (max-width: ${breakpoints.sm}) {
-    width: 250px;
-    @keyframes showSidebar {
-      from {
-        opacity: 0;
-        width: 0;
-      }
-      to {
-        opacity: 1;
-        width: 250px;
-      }
-    }
+    height: 100vh;
+    width: 100vh;
   }
-`;
-
-export const StyledUl = styled.ul`
-  margin-top: 40px;
-  margin-left: 17px;
-  color: ${({ theme }) => theme.colors.primary300};
-  animation: falling 0.5s ease-in-out;
 
   @keyframes falling {
     0% {
@@ -54,6 +33,12 @@ export const StyledUl = styled.ul`
       transform: translateY(0);
     }
   }
+`;
+
+export const StyledUl = styled.ul`
+  margin-top: 5rem;
+  margin-left: 17px;
+  color: ${({ theme }) => theme.colors.primary300};
 `;
 export const StyledLi = styled.li`
   color: ${({ theme }) => theme.colors.secondary100};
@@ -75,8 +60,8 @@ export const StyledFaHome = styled(FaHome)`
 export const FaIconsContainer = styled.div`
   color: ${({ theme }) => theme.colors.primary100};
   display: flex;
-  justify-content: space-between;
-  margin-left: 15px;
+  position: absolute;
+  right: 5px;
   margin-top: 12px;
 `;
 
@@ -88,14 +73,18 @@ export const StyledFaBars = styled(FaBars)`
 `;
 
 export const StyledFaMoon = styled(FaMoon)`
-  color: #5f9982;
+  color: #ebf0f8;
+  width: 39px;
+  height: 40px;
   &:hover {
     cursor: pointer;
   }
 `;
 
 export const StyledLuSunMoon = styled(LuSunMoon)`
-  color: #f4e196;
+  color: #ebf0f8;
+  width: 39px;
+  height: 40px;
   &:hover {
     cursor: pointer;
   }
@@ -115,4 +104,13 @@ export const StyledFaLaptopCode = styled(FaLaptopCode)`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+export const HeaderSidebar = styled.div`
+  background: ${({ theme }) => setBackground(theme)};
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 2px 1px 1px ${({ theme }) => theme.colors.secondaryBackground};
 `;
