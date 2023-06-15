@@ -1,5 +1,8 @@
 const spacings = {
-  sm: "2px",
+  sm: "4px",
+  md: "8px",
+  lg: "12px",
+  xl: "16px",
 };
 
 export default spacings;

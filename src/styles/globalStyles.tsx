@@ -1,11 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import { DefaultTheme } from "styled-components/dist/types";
 
-const setBackground = (theme: DefaultTheme) => {
-  const backgroundStyle = `linear-gradient(121deg, ${theme.colors.background} 37%, ${theme.colors.secondary100} 100%)`;
-
-  return backgroundStyle;
-};
+import backgroundDark from "../assets/imgs/backgroundDark.svg";
+import backgroundLight from "../assets/imgs/backgroundLight.svg";
 
 import "./fontFamily.css";
 
@@ -110,7 +107,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     width: 100vw;
     transition: all 0.25s linear;
-    background: ${({ theme }) => setBackground(theme)};
+    background: ${({ theme }) => theme.colors.svg};
     font-family: 'Exo', sans-serif;
   }
 `;

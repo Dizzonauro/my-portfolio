@@ -1,3 +1,5 @@
+import backgroundLight from "../assets/imgs/backgroundLight.svg";
+
 const primary = {
   primary100: "#fff",
   primary200: "#2c2c31",
@@ -15,7 +17,7 @@ const lightTheme = {
   colors: {
     background: "#50a1d9",
     secondaryBackground: "#3c6eb4",
-    hover: "#0ccaba",
+    svg: `url(${backgroundLight})`,
     ...primary,
     ...secondary,
   },

@@ -4,7 +4,6 @@ import {
   HeaderSidebar,
   SideBar,
   StyledBsBriefcaseFill,
-  StyledFaBars,
   StyledFaHome,
   StyledFaLaptopCode,
   StyledFaMoon,

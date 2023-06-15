@@ -1,3 +1,5 @@
+import backgroundDark from "../assets/imgs/backgroundDark.svg";
+
 const primary = {
   primary100: "#fff",
   primary200: "#fff",
@@ -15,7 +17,7 @@ const darkTheme = {
   colors: {
     background: "#294273",
     secondaryBackground: "#3b6db3",
-    hover: "#c0d860",
+    svg: `url(${backgroundDark})`,
     ...primary,
     ...secondary,
   },

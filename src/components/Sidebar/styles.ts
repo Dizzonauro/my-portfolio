@@ -61,7 +61,7 @@ export const FaIconsContainer = styled.div`
   color: ${({ theme }) => theme.colors.primary100};
   display: flex;
   position: absolute;
-  right: 5px;
+  right: 6px;
   margin-top: 12px;
 `;
 
@@ -74,8 +74,9 @@ export const StyledFaBars = styled(FaBars)`
 
 export const StyledFaMoon = styled(FaMoon)`
   color: #ebf0f8;
-  width: 39px;
+  width: 37px;
   height: 40px;
+  padding: 2px;
   &:hover {
     cursor: pointer;
   }
@@ -83,7 +84,8 @@ export const StyledFaMoon = styled(FaMoon)`
 
 export const StyledLuSunMoon = styled(LuSunMoon)`
   color: #ebf0f8;
-  width: 39px;
+  padding: 2px;
+  width: 37px;
   height: 40px;
   &:hover {
     cursor: pointer;

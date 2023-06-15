@@ -5,7 +5,6 @@ import {
   HeaderImg,
   ImageContent,
   HeaderPages,
-  Pages,
   IconDarkMode,
   BarsContent,
   StyledLuSunMoon,
@@ -13,11 +12,6 @@ import {
   StyledLink,
 } from "./styles";
 import { useTheme } from "../../contexts/themeContext";
-import cssLogo from "../../assets/imgs/cssLogo.png";
-import htmlLogo from "../../assets/imgs/htmlLogo.png";
-import javaScriptLogo from "../../assets/imgs/javaScriptLogo.png";
-import reactLogo from "../../assets/imgs/reactLogo.png";
-import typeScriptLogo from "../../assets/imgs/typeScriptLogo.png";
 
 import { FaBars } from "react-icons/fa";
 import Sidebar from "../Sidebar/index";
@@ -39,13 +33,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <HeaderBar>
-        <HeaderImg>
-          <ImageContent src={cssLogo} />
-          <ImageContent src={htmlLogo} />
-          <ImageContent src={javaScriptLogo} />
-          <ImageContent src={reactLogo} />
-          <ImageContent src={typeScriptLogo} />
-        </HeaderImg>
+        <HeaderImg></HeaderImg>
         <BarsContent>
           <FaBars style={{ color: currentTheme.colors.secondary300 }} onClick={showSideBar} />
         </BarsContent>
