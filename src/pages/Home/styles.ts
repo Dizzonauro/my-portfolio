@@ -65,7 +65,9 @@ export const TechContainer = styled.div`
     padding-left: 10px;
     border: 1px solid black;
   }
-  @media (max-width: ${breakpoints.sm}) {
+  @media (max-width: ${breakpoints.md}) {
+    display: flex;
+    justify-content: space-evenly;
   }
   @media (max-width: ${breakpoints.lg}) {
     width: 80%;
@@ -85,7 +87,7 @@ export const ImageContent = styled.img`
     padding-bottom: 4px;
   }
 
-  @media (max-width: ${breakpoints.sl}) {
+  @media (max-width: ${breakpoints.sm}) {
     height: 38px;
   }
 `;
