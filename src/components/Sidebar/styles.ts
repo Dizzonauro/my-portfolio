@@ -5,8 +5,6 @@ import { LuSunMoon } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { BsBriefcaseFill } from "react-icons/bs";
 
-import teste from "../../assets/imgs/teste.jpg";
-
 import { DefaultTheme } from "styled-components/dist/types";
 
 const setBackground = (theme: DefaultTheme) => {
@@ -16,7 +14,7 @@ const setBackground = (theme: DefaultTheme) => {
 };
 
 export const SideBar = styled.div`
-  /* background-color: ${({ theme }) => theme.colors.background}; */
+  background-color: ${({ theme }) => theme.colors.background};
   position: fixed;
   margin-top: 61px;
   color: ${({ theme }) => theme.colors.primary300};
@@ -24,9 +22,6 @@ export const SideBar = styled.div`
 
   @media (max-width: ${breakpoints.sm}) {
     height: 100vh;
-    background-image: url(${teste});
-    background-size: cover;
-    backgroundrepeat: "no-repeat";
     width: 100vh;
   }
 
