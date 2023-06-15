@@ -15,7 +15,7 @@ export const HeaderContainer = styled.div`
   background: ${({ theme }) => setBackground(theme)};
   color: ${({ theme }) => theme.colors.primary100};
   font-size: 1.3em;
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   height: 4rem;
