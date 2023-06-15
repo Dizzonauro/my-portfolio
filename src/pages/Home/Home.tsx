@@ -50,7 +50,7 @@ const Home = () => {
   return (
     <Container>
       <FirstContainer>
-        <StyledH1>About me</StyledH1>
+        <StyledH1>About </StyledH1>
         <StyledParagraph>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum alias impedit iste est
           omnis ipsam nulla eveniet accusantium error aliquid?
