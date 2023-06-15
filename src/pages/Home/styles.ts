@@ -37,6 +37,7 @@ export const StyledH1 = styled.h1`
   display: flex;
   font-weight: bold;
   font-size: 35px;
+  text-align: center;
   justify-content: center;
 `;
 
@@ -45,12 +46,15 @@ export const StyledH2 = styled.h2`
   font-weight: bold;
   font-size: 32px;
   justify-content: center;
+  text-align: center;
+
   margin-top: ${sizes.xl};
   margin-bottom: ${sizes.xl};
 `;
 
 export const StyledParagraph = styled.p`
   font-size: 20px;
+  text-align: center;
   margin: ${sizes.xl};
 `;
 
