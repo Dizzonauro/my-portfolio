@@ -51,10 +51,7 @@ const Home = () => {
     <Container>
       <FirstContainer>
         <StyledH1>About me</StyledH1>
-        <StyledParagraph>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum alias impedit iste est
-          omnis ipsam nulla eveniet accusantium error aliquid?
-        </StyledParagraph>
+        <StyledParagraph>Test push gh pages</StyledParagraph>
       </FirstContainer>
       <SecondaryContainer>
         <StyledH2>My Techs</StyledH2>
