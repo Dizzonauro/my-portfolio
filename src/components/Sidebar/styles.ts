@@ -23,6 +23,21 @@ export const SideBar = styled.div`
   @media (max-width: ${breakpoints.sm}) {
     height: 100vh;
     width: 100vh;
+    border: 1px solid green;
+  }
+
+  @media (min-width: ${breakpoints.md}) {
+    height: 100vh;
+    width: 100%;
+    border: 1px solid black;
+  }
+  @media (max-width: ${breakpoints.md}) {
+    height: 100vh;
+    width: 100%;
+    border: 1px solid black;
+  }
+  @media (min-width: ${breakpoints.lg}) {
+    border: 1px solid yellow;
   }
 
   @keyframes falling {

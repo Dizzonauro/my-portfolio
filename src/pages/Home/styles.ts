@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   color: white;
-  @media (max-width: ${breakpoints.sm}) {
+  @media (min-width: ${breakpoints.sm}) {
     display: inline-block;
   }
 `;
@@ -73,7 +73,7 @@ export const TechContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
   }
-  @media (max-width: ${breakpoints.lg}) {
+  @media (min-width: ${breakpoints.md}) and (min-width: ${breakpoints.lg}) {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;

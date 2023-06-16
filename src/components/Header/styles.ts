@@ -65,32 +65,48 @@ export const BarsContent = styled.div`
     padding-bottom: 4px;
   }
 
-  @media (max-width: ${breakpoints.sm}) {
-    display: flex;
-  }
   @media (max-width: ${breakpoints.md}) {
     display: flex;
   }
-  @media (max-width: ${breakpoints.lg}) {
-    display: flex;
+  @media (min-width: ${breakpoints.md}) {
+    display: none;
   }
-  @media (max-width: ${breakpoints.xl}) {
-    display: flex;
-  }
-  display: none;
 `;
 
 export const HeaderPages = styled.div`
-  display: none;
-  justify-content: space-between;
-  margin-right: 60px;
   width: 50vw;
   align-items: center;
   color: ${({ theme }) => theme.colors.primary100};
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 60px;
+  margin-top: 10px;
+  font-size: 30px;
 
-  @media (min-width: ${breakpoints.xl}) {
+  @media (max-width: ${breakpoints.md}) {
+    display: none;
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.md}) {
     display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 23px;
+  }
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 23px;
+    align-items: center;
+  }
+
+  @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 60px;
     margin-top: 10px;
+    font-size: 30px;
   }
 `;
 
@@ -108,9 +124,19 @@ export const StyledLink = styled(Link)`
 export const IconDarkMode = styled.div`
   position: absolute;
   right: 5px;
+  font-size: 32px;
   top: 10px;
   &:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: ${breakpoints.md}) {
+    font-size: 28px;
+    top: 13px;
+  }
+
+  @media (min-width: ${breakpoints.xl}) {
+    font-size: 32px;
   }
 `;
 
