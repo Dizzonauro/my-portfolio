@@ -7,6 +7,7 @@ import {
   StyledH1,
   StyledH2,
   StyledParagraph,
+  StyledParagraphAboutMe,
   TechContainer,
 } from "./styles";
 
@@ -51,10 +52,10 @@ const Home = () => {
     <Container>
       <FirstContainer>
         <StyledH1>About me</StyledH1>
-        <StyledParagraph>
+        <StyledParagraphAboutMe>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum alias impedit iste est
           omnis ipsam nulla eveniet accusantium error aliquid?
-        </StyledParagraph>
+        </StyledParagraphAboutMe>
       </FirstContainer>
       <SecondaryContainer>
         <StyledH2>My Techs</StyledH2>

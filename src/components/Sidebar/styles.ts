@@ -19,6 +19,7 @@ export const SideBar = styled.div`
   margin-top: 61px;
   color: ${({ theme }) => theme.colors.primary300};
   animation: falling 0.2s ease-in;
+  border-top: 1px red;
 
   @media (max-width: ${breakpoints.sm}) {
     height: 100vh;
