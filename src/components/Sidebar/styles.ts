@@ -4,7 +4,6 @@ import { FaBars, FaHome, FaMoon, FaArrowRight, FaLaptopCode } from "react-icons/
 import { LuSunMoon } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { BsBriefcaseFill } from "react-icons/bs";
-import pangare from "../../assets/imgs/pangare.jpg";
 
 import { DefaultTheme } from "styled-components/dist/types";
 
@@ -15,8 +14,7 @@ const setBackground = (theme: DefaultTheme) => {
 };
 
 export const SideBar = styled.div`
-  /* background-color: ${({ theme }) => theme.colors.background}; */
-  background-image: url(${pangare});
+  background-color: ${({ theme }) => theme.colors.background};
   background-size: cover;
   background-repeat: no-repeat;
   position: fixed;

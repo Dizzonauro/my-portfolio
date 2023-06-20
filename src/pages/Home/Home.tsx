@@ -51,7 +51,7 @@ const Home = () => {
   return (
     <Container>
       <FirstContainer>
-        <StyledH1>About me</StyledH1>
+        <StyledH1>About me Test</StyledH1>
         <StyledParagraphAboutMe>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum alias impedit iste est
           omnis ipsam nulla eveniet accusantium error aliquid?
