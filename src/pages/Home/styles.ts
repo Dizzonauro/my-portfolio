@@ -71,7 +71,6 @@ export const StyledParagraph = styled.p`
   @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
     width: 700px;
     order: 3;
-    border: 1px solid red;
     padding-top: 60px;
   }
   @media (min-width: ${breakpoints.xl}) {
@@ -90,7 +89,6 @@ export const TechContainer = styled.div`
 
   @media (max-width: ${breakpoints.sm}) {
     padding-left: 10px;
-    border: 1px solid black;
     margin: 20px;
   }
   @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
@@ -98,13 +96,12 @@ export const TechContainer = styled.div`
     width: 7%;
     margin: 30px;
   }
-  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.xl}) {
     width: 60px;
     display: flex;
     flex-direction: column;
     order: 2;
     margin-right: 40px;
-    margin-top: -20px;
     height: 300px;
   }
   @media (min-width: ${breakpoints.xl}) {
